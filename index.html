@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="Fonts/fonts.css">
+    <link rel="stylesheet" href="css/icofont/icofont.css">
+    <link rel="stylesheet" href="Js/col/color-picker.css">
+
+    <script src="Js/jquery-3.3.1.js"></script>
+    <script src="Js/main.js"></script>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header"></div>
+    <div  class="cont">
+        <div style="position: fixed;">
+            <button class="add" onclick="$('.adder').toggleClass('viadd');$(this).toggleClass('addB','add');"></button>
+            <div class="adder">
+                <button  tag="op" inner="HeadLines"  data="h1">h1</button>
+                <button  tag="op" inner="HeadLines"  data="div">div</button>
+                <button  tag="op" inner="HeadLines"  data="span">span</button>
+                <button  tag="close" inner=""  data="img">picture</button>
+                <button  tag="op" inner="HeadLines"  data="h2">h2</button>
+                <button  tag="op" inner="HeadLines" data="h3">h3</button>
+        
+            </div>
+            <div style="float: right;" class="tool">
+                <button  onclick="$('.focus').remove()"><i class="icofont-ui-delete"></i></button>
+                <button  onclick="conte()"><i class="icofont-ui-copy"></i></button>           
+            </div>
+        </div>
+        <div id="conte">
+            <div class="focus" style="padding:50px;min-height: 100px; min-width: 100px; overflow: auto;" contenteditable="true"></div>
+        </div>
+    </div>
+    <div class="toolBar">
+        <script src="Js/col/color-picker.js"></script>
+        <div>
+            <div class="subH">Font</div>
+            <div class="big"><i class="icofont-font"></i><input mod="sel" sel-data="fonts" type="text" data="font-family"></div>
+            <div class="small"><i class="icofont-text-height"></i><input  mod="txt"  type="text" data="font-size"></div>
+            <div class="small"><i class="icofont-line-height"></i><input mod="txt" type="text" data="line-height"></div>
+            <div class="small"><i class="icofont-text-width"></i><input mod="txt" type="text" data="font-weight"></div>
+        </div>
+        
+        <div>
+            <div class="subH">Layout</div>
+            <div class="small"><i class="icofont-curved-right"></i><input mod="txt" type="text" data="margin"></div>
+            <div class="small"><i class="icofont-curved-left"></i><input mod="txt" type="text" data="padding"></div>
+            <div class="small"><i class="icofont-vector-path"></i><input mod="txt" type="text" data="border-radius"></div>
+            <div class="small"><i class="icofont-resize"></i><input  mod="txt"  type="text" data="height"></div>
+            <div class="small"><i class="icofont-sign-in"></i><input mod="txt" type="text" data="width"></div>
+  
+        </div>
+            
+        <div>
+            <div class="subH">Style</div>
+                <i style="position: relative; top:8px" class="icofont-font"></i><div mod="col" type="text" data="color"></div>
+                <i class="icofont-paint" style="position: relative; top:8px"></i><div mod="col" type="text" data="background-color">       
+            </div>
+            <div  mod="txtcm" class="small">Border<br><input value="solid" type="text" Cdata="border"><input type="text" Cdata="border"><input mod="Ccol"  type="text" Cdata="border"/></div>
+            <div  mod="txtcm" class="small">Shadow<br><input type="text" Cdata="box-shadow"><input mod="Ccol"  type="text" Cdata="box-shadow"/><input mod="Ccol"  type="text" Cdata="box-shadow"/><input mod="Ccol"  type="text" Cdata="box-shadow"/></div>    
+            <div  mod="txtcm" class="small">Text Shadow<br><input type="text" Cdata="text-shadow"><input mod="Ccol"  type="text" Cdata="text-shadow"/><input mod="Ccol"  type="text" Cdata="text-shadow"/><input mod="Ccol"  type="text" Cdata="text-shadow"/></div>    
+
+        </div>
+    
+       
+       <div>
+            <div class="subH">Align</div>
+                <div mod="tgB" type="text" datatype="text-align" data="justify"><i style="" class="icofont-justify-all"></i></div>
+                <div mod="tgB" type="text" datatype="text-align" data="left"><i class="icofont-justify-left" style=""></i></div>
+                <div mod="tgB" type="text" datatype="text-align" data="center"><i class="icofont-justify-center" style=""></i></div>
+                <div mod="tgB" type="text" datatype="text-align" data="right"><i class="icofont-justify-right" style=""></i></div>
+        </div>
+        <div>
+            <div class="subH">float</div>
+                <div mod="tgB" type="text" datatype="float" data="left"><i class="icofont-justify-left" style=""></i></div>
+                <div mod="tgB" type="text" datatype="float" data="right"><i class="icofont-justify-right" style=""></i></div>
+        </div>
+
+        <div sp="img">
+            <div class="subH">Image</div>
+            <div class="big"><i class="icofont-file-image"></i><input mod="attr" type="text" Attrdata="src"></div>
+            <div class="big"><i class="icofont-ui-image"></i><input mod="txt" value="url('')" type="text" data="background-image"></div>
+        </div>
+    </div>
+
+    <div style="position: absolute; bottom: 0px; width: 100%; height: 100px;" class="code">
+        <textarea ></textarea>
+    </div>  
+</body>
+</html>
